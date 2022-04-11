@@ -33,8 +33,9 @@ rightBtn.addEventListener('click', function() {browseRight()})
 // ***Initialization***
 // Declare global data storage object
 let movies
-
+// Declare index binding
 let browseIndex
+const music = new Audio('Always_With_Me-Spirited_Away-Piano.mp3')
 
 // Grab data from API
 fetch(`https://ghibliapi.herokuapp.com/films`)
@@ -49,6 +50,7 @@ fetch(`https://ghibliapi.herokuapp.com/films`)
     })
 
 function browseLeft() {
+    music.play()
     document.querySelector('.titleBox').classList.remove('hidden')
     document.querySelector('.detailsTable').classList.remove('hidden')
     //If first click, or at end of array, set movie to be displayed to 0
@@ -58,6 +60,7 @@ function browseLeft() {
 }
 
 function browseRight() {
+    music.play()
     document.querySelector('.titleBox').classList.remove('hidden')
     document.querySelector('.detailsTable').classList.remove('hidden')
 
