@@ -1,0 +1,180 @@
+/* Box Model Bugfixer */
+/* * {
+     outline: 1px solid red;
+} */
+
+/* Box Model Hack */
+* {
+     box-sizing: border-box;
+}
+
+/* Clear fix hack */
+.clearfix:after {
+     content: ".";
+     display: block;
+     clear: both;
+     visibility: hidden;
+     line-height: 0;
+     height: 0;
+}
+
+.clear {
+	clear: both;
+}
+
+
+
+/******************************************
+/* COLORS
+/*******************************************/
+
+
+
+/******************************************
+/* TYPOGRAPHY
+/*******************************************/
+
+
+/******************************************
+/* BASE STYLES
+/*******************************************/
+/* Set 1 rem to 10px */
+html {
+     font-size: 62.5%;
+     font-family: sans-serif;
+     /* background: linear-gradient(rgba(0,0,0,.7), rgba(0,0,0,.7)), url('../milkyway-bg.jpg'); */
+     background: url('../bathouseBG.jpg');
+     background-size: cover;
+     background-repeat: no-repeat;
+     background-position: center;
+     color: white;
+     height: 100vh;
+}
+
+
+/******************************************
+/* LAYOUT
+/*******************************************/
+body {
+     padding: 3rem;
+     text-align: center;
+     text-shadow: -2px 2px 5px black;
+}
+
+
+
+/***** HEADER LAYOUT ******/
+header h2 {
+     font-size: 5rem;
+     padding: 2rem;
+}
+
+/***** TITLE BOX LAYOUT ******/
+
+/* Film Title */
+h2 {
+     font-size: 3rem;
+     padding: 2rem;
+}
+
+#titleJP {
+     font-size: 5rem;
+}
+
+h3 {
+     font-size: 2rem;
+}
+
+
+
+
+/***** POSTER/NAV LAYOUT ******/
+
+.posterBox {
+     position: relative;
+}
+
+/* Poster/Nav Box */
+.posterNavBox {
+     display: flex;
+     justify-content: center;
+     align-items: center;
+}
+
+
+/* Poster */
+.poster {
+     max-height: 500px;
+     border: 3px solid black;
+}
+
+
+
+a {
+     color: white;
+     padding: 2rem;
+     background: rgba(0,0,0,.4);
+     border: 3px solid white;
+     border-radius: 10px;
+     display: inline-block;
+     margin: 2rem;
+     text-decoration: none;
+     font-size: 3rem;
+     /* box-shadow: -.5rem .5rem 1rem black; */
+     transition: text-shadow .5s, transform .5s, box-shadow .5s;
+     cursor: pointer;
+     text-shadow: none;
+}
+
+a:hover {
+     text-shadow: 0 0 2rem white;
+     box-shadow: 0 1rem 1rem black;
+     transform: translateY(-.5rem);
+     transition: text-shadow .5s, transform .5s, box-shadow .5s;
+}
+
+a:active {
+     transform: translateY(0rem);
+     box-shadow: 0 0 1rem white;
+     transition: translate .1s;
+}
+
+/***** DETAILS BOX LAYOUT ******/
+
+.detailsBox {
+     position: absolute;
+     top: 0;
+     left: 0;
+     height: 100%;
+     width: 100%;
+
+     display: flex;
+     justify-content: center;
+     align-items: flex-start;
+     flex-flow: column nowrap;
+}
+
+.detailsTable {
+     position: absolute;
+     top: 0;
+     left: 0;
+     height: 100%;
+     width: 100%;
+     
+}
+
+
+/***** DYNAMIC STYLES ******/
+.hidden {
+     visibility: hidden;
+}
+
+.removed {
+     display: none;
+}
+
+
+/******************************************
+/* ADDITIONAL STYLES
+/*******************************************/
+
