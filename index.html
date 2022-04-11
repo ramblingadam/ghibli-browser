@@ -8,6 +8,11 @@
 
 		<title>Studio Ghibli Film Broswer</title>
 
+		<!-- Google Fonts -->
+		<link rel="preconnect" href="https://fonts.googleapis.com">
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+		<link href="https://fonts.googleapis.com/css2?family=Satisfy&display=swap" rel="stylesheet"> 
+
 		<!-- Font-Awesome Icons -->
 		<script src="https://kit.fontawesome.com/ab085a1591.js" crossorigin="anonymous"></script>
 		
@@ -18,11 +23,11 @@
 	<body>
 
 		<header>
-			<h2>STUDIO GHIBLI BROWSER</h2>
+			<h2>~ Studio Ghibli Film Browser ~</h2>
 		</header>
 
 		<main>
-			<section class="titleBox">
+			<section class="titleBox hidden">
 				<h2 id='titleJP'>JP Title</h2>
 				<h3 id='titleRomanized'>Romanized</h3>
 				<h2 id='title'>Film Title</h2>
@@ -46,29 +51,30 @@
 						<h3 id="runtime">Runtime:</h3>
 					</section> -->
 
-					<!-- <section class="detailsTable">
+					<section class="detailsTable hidden">
 						<table>
 							<tr>
-								<td>Year</td>
+								<td>Year:</td>
 								<td id="year"></td>
 							</tr>
 							<tr>
-								<td>Director</td>
+								<td>Director:</td>
 								<td id="director"></td>
 							</tr>
 							<tr>
-								<td>Producer</td>
+								<td>Producer:</td>
 								<td id="producer"></td>
 							</tr>
 							<tr>
-								<td>RT Score</td>
+								<td>RT Score:</td>
 								<td id="rtScore"></td>
 							</tr>
 							<tr>
-								<td>Runtime</td>
+								<td>Runtime:</td>
 								<td id="runtime"></td>
 							</tr>
-					</section> -->
+						</table>
+					</section>
 
 				</section>
 
@@ -98,7 +104,17 @@
 						<td>Runtime</td>
 						<td id="runtime"></td>
 					</tr>
+				</table>
 			</section> -->
+
+			<section class='descriptionBox'>
+				<h3 id='description'></h3>
+
+			</section>
+
+			<footer>
+				<span>Data provided by <a href="https://github.com/janaipakos/ghibliapi">Ghibli API</a>
+			</footer>
 
 
 		</main>

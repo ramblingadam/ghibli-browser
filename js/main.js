@@ -18,6 +18,8 @@ producer = document.querySelector('#producer')
 rtScore = document.querySelector('#rtScore')
 runtime = document.querySelector('#runtime')
 
+description = document.querySelector('#description')
+
 
 html = document.querySelector('html')
 
@@ -47,6 +49,8 @@ fetch(`https://ghibliapi.herokuapp.com/films`)
     })
 
 function browseLeft() {
+    document.querySelector('.titleBox').classList.remove('hidden')
+    document.querySelector('.detailsTable').classList.remove('hidden')
     //If first click, or at end of array, set movie to be displayed to 0
     if(browseIndex === undefined || browseIndex <= 0) browseIndex = 21 
     else browseIndex -= 1
@@ -54,6 +58,9 @@ function browseLeft() {
 }
 
 function browseRight() {
+    document.querySelector('.titleBox').classList.remove('hidden')
+    document.querySelector('.detailsTable').classList.remove('hidden')
+
     //If first click, or at end of array, set movie to be displayed to 0
     if(browseIndex === undefined || browseIndex >= movies.length - 1) browseIndex = 0 
     else browseIndex += 1
@@ -74,9 +81,16 @@ function updateDisplay() {
     
     year.innerText = movies[browseIndex].release_date
     director.innerText = movies[browseIndex].director
-    producer.innerText = movies[browseIndex].producer
+
+    if(browseIndex === 20) producer.innerText = 'Toshio Suzuki'
+    else producer.innerText = movies[browseIndex].producer
+
     rtScore.innerText = movies[browseIndex].rt_score
-    runtime.innerText = movies[browseIndex].running_time
+    runtime.innerText = `${movies[browseIndex].running_time} minutes`
+
+    description.innerText = movies[browseIndex].description
+
+
 }
 
 

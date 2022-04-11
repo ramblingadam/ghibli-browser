@@ -43,12 +43,12 @@ html {
      font-size: 62.5%;
      font-family: sans-serif;
      /* background: linear-gradient(rgba(0,0,0,.7), rgba(0,0,0,.7)), url('../milkyway-bg.jpg'); */
-     background: url('../bathouseBG.jpg');
+     background: linear-gradient(rgba(0,0,0,.5), rgba(0,0,0,.5)), url('../bathouseBG.jpg');
      background-size: cover;
      background-repeat: no-repeat;
      background-position: center;
      color: white;
-     height: 100vh;
+     min-height: 100vh;
 }
 
 
@@ -65,8 +65,9 @@ body {
 
 /***** HEADER LAYOUT ******/
 header h2 {
-     font-size: 5rem;
-     padding: 2rem;
+     font-size: 3rem;
+     padding: 2rem 0 2rem 0;
+     font-family: 'Satisfy', serif;
 }
 
 /***** TITLE BOX LAYOUT ******/
@@ -79,11 +80,16 @@ h2 {
 
 #titleJP {
      font-size: 5rem;
+     padding-bottom: .5rem;
 }
 
 h3 {
      font-size: 2rem;
+     max-width: 800px;
+     margin: auto;
 }
+
+
 
 
 
@@ -106,11 +112,13 @@ h3 {
 .poster {
      max-height: 500px;
      border: 3px solid black;
+     border-radius: 25px;
+     box-shadow: 0 0 1rem white;
 }
 
 
 
-a {
+.arrowBtn {
      color: white;
      padding: 2rem;
      background: rgba(0,0,0,.4);
@@ -126,14 +134,14 @@ a {
      text-shadow: none;
 }
 
-a:hover {
+.arrowBtn:hover {
      text-shadow: 0 0 2rem white;
      box-shadow: 0 1rem 1rem black;
      transform: translateY(-.5rem);
      transition: text-shadow .5s, transform .5s, box-shadow .5s;
 }
 
-a:active {
+.arrowBtn:active {
      transform: translateY(0rem);
      box-shadow: 0 0 1rem white;
      transition: translate .1s;
@@ -158,9 +166,58 @@ a:active {
      position: absolute;
      top: 0;
      left: 0;
-     height: 100%;
+     height: 99%;
      width: 100%;
+
+     display: flex;
+     justify-content: center;
+     align-items: center;
+    
+     font-size: 2rem;
+
+     opacity: 0;
+     background: rgba(0,0,0,.4);
+     transition: opacity .3s;
      
+     border-radius: 25px;
+}
+
+.detailsTable:hover {
+     opacity: 1;
+     transition: opacity .3s;
+}
+
+
+td {
+     padding: .5rem;
+}
+
+td:first-child {
+     text-align: right;
+}
+td:last-child {
+     text-align: left;
+}
+
+
+/* DESCRIPTION LAYOUT */
+#description {
+     margin-top: 1rem;
+}
+
+
+/* FOOTER LAYOUT */
+footer {
+     /* position: absolute; */
+     /* bottom: 1rem; */
+     margin-top: 2rem;
+     
+}
+
+
+footer a {
+     text-decoration: underline dotted;
+     color: white;
 }
 
 
@@ -178,3 +235,37 @@ a:active {
 /* ADDITIONAL STYLES
 /*******************************************/
 
+@media all and (max-width: 510px) {
+     html {
+          font-size: 50%;
+     }
+
+     
+     /* .poster {
+          max-height: 300px;
+     } */
+
+     .posterNavBox {
+          flex-flow: row wrap;
+     }
+
+     
+     #leftBtn {
+          order: 2;
+          flex-basis: 35%;
+     }
+
+     #rightBtn {
+          order: 3;
+          flex-basis: 35%;
+     }
+}
+
+@media all and (max-width: 375px) {
+     body {
+          padding: 1rem;
+     }
+     .poster {
+          max-height: 350px;
+     }
+}
