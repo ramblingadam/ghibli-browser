@@ -220,6 +220,11 @@ footer a {
      color: white;
 }
 
+/* License */
+footer p {
+     margin-top: 1rem;
+}
+
 
 /***** DYNAMIC STYLES ******/
 .hidden {
