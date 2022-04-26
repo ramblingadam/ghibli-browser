@@ -1,5 +1,7 @@
 # Studio Ghibli Film Browser
-A clean, responsive web app for discovering and learning about films produced by the renowned Japanese animation company Studio Ghibli. Built with HTML, CSS, and JS. Utilizes the [Studio Ghibli API](https://github.com/janaipakos/ghibliapi).
+A clean, responsive web app for discovering and learning about films produced by the renowned Japanese animation company Studio Ghibli.
+
+Built with HTML, CSS, and JS. Utilizes the [Studio Ghibli API](https://github.com/janaipakos/ghibliapi).
 
 Try it out [here](https://ramblingadam.github.io/ghibli-browser/)!
 
