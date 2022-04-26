@@ -3,7 +3,7 @@ A clean, responsive web app for discovering and learning about films produced by
 
 Built with HTML, CSS, and JS. Utilizes the [Studio Ghibli API](https://github.com/janaipakos/ghibliapi).
 
-Try it out [here](https://ramblingadam.github.io/ghibli-browser/)!
+[Try it out here](https://ramblingadam.github.io/ghibli-browser/)!
 
 
 
