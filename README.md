@@ -1,5 +1,5 @@
-# Studio Ghibli Film Browser
-A clean, responsive web app for discovering and learning about films produced by the renowned Japanese animation company Studio Ghibli.
+# Discover Ghibli
+A responsive web app which helps new fans discover the full breadth of Studio Ghibli's incredible film catalog. Sure, everybody's seen Spirited Away, but have you ever heard of Porco Rosso, or Pom Poko?
 
 Built with HTML, CSS, and JS. Utilizes the [Studio Ghibli API](https://github.com/janaipakos/ghibliapi).
 
